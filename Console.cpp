@@ -84,9 +84,10 @@ void Console::run_console()
 									string nume_cumparator, nume_artist;
 									int numar_bilete;
 									cout << "Care este numele cumparatorului? ";
-									cin >> nume_cumparator;
+									cin.ignore();
+									getline(cin,nume_cumparator);
 									cout << "Care este numele artistului la spectacolul caruia doriti sa achizitionati bilete? ";
-									cin >> nume_artist;
+									getline(cin,nume_artist);
 									cout << "Cate bilete doreste sa achizitioneze? ";
 									numar_bilete = this->getInteger();
 									this->service.cumparare_bilet_artist(nume_artist, nume_cumparator, numar_bilete);
@@ -110,9 +111,10 @@ void Console::run_console()
 										string nume_cumparator, nume_film;
 										int numar_bilete;
 										cout << "Care este numele cumparatorului? ";
-										cin >> nume_cumparator;
+										cin.ignore();
+										getline(cin,nume_cumparator);
 										cout << "Care este titlul filmului? ";
-										cin >> nume_film;
+										getline(cin,nume_film);
 										cout << "Cate bilete doreste sa achizitioneze? ";
 										numar_bilete = this->getInteger();
 
